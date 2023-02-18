@@ -49,33 +49,12 @@ export default function Practice1() {
         }
     }
 
-    // const nextBtn = () =>{
-    //     if(pageNum < totalNum-1){
-    //         let curPage = pageNum+1;
-    //         // setPageNum(curPage);
-    //         // pageChangeFunc();
-    //         var section = document.getElementsByTagName("section");
-    //         window.scrollTo({
-    //             top: section[curPage].offsetTop,
-    //             behavior: 'smooth',
-    //         })
-    //     }
-    // }
-
-    // const pageChangeFunc = () =>{
-    //     // var section = document.getElementsByTagName("section");
-    //     // window.scrollTo({
-    //     //     top: section[pageNum].offsetTop,
-    //     //     behavior: 'smooth',
-    //     // })
-    // }
-
     return (
         <div style={{backgroundColor:bgColorArr[pageNum]}}>
             <div className="navi">
                 <button type="button" className="prevBtn" onClick={()=>buttonAction(-1)}>PREV</button>
                 <button type="button" className="nextBtn" onClick={()=>buttonAction(1)}>NEXT</button>
-                <h1>{pageNum+1} 페이지 입니다.</h1>
+                <h1>Page of {pageNum+1}</h1>
             </div>
 
             <section>

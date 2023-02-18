@@ -1,14 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Practice1 from './components/practice1';
+import { Link } from 'react-router-dom';
+
+import './scss/general.scss';
 
 function App() {
-  return (
-    <div className="App">
-        <Practice1/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <h1>Hello world. This is interactice web development practice</h1>
+            <ul>
+                <li>
+                    <Link to="practice1">Practice 1</Link></li>
+            </ul>
+        </div>
+    );
 }
 
 export default App;
