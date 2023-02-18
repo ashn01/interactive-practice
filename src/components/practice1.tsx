@@ -50,7 +50,7 @@ export default function Practice1() {
     }
 
     return (
-        <div style={{backgroundColor:bgColorArr[pageNum]}}>
+        <div className="practice1" style={{backgroundColor:bgColorArr[pageNum]}}>
             <div className="navi">
                 <button type="button" className="prevBtn" onClick={()=>buttonAction(-1)}>PREV</button>
                 <button type="button" className="nextBtn" onClick={()=>buttonAction(1)}>NEXT</button>

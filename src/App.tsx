@@ -10,6 +10,8 @@ function App() {
             <ul>
                 <li>
                     <Link to="practice1">Practice 1</Link></li>
+                <li>
+                    <Link to="practice2">Practice 2</Link></li>
             </ul>
         </div>
     );
