@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import '../scss/practice3.scss'
+import '../scss/practice4.scss'
 
-export default function Practice3() {
+export default function Practice4() {
     const [pageNum, setPageNum] = useState<number>(0);
-    const [totalNum, setTotalNum] = useState<number>(8);
+    const [totalNum, setTotalNum] = useState<number>(4);
 
     useEffect(() => {
         window.addEventListener("scroll", scrollEvent)
@@ -20,7 +20,7 @@ export default function Practice3() {
 
         for (var i = 0; i < totalNum; i++) {
             section[i].classList.remove("active");
-            // section[i].className = "";
+            // section[i].classNameName = "";
             pointBtn[i].classList.remove("active");
         }
         section[pageNum].classList.add("active");
@@ -54,7 +54,7 @@ export default function Practice3() {
 
 
     return (
-        <div className="practice3">
+        <div className="practice4">
             <ul className="pointWrap">
                 {
                     [...Array(totalNum)].map((value, key) => {
@@ -64,63 +64,40 @@ export default function Practice3() {
             </ul>
 
             <section>
-                <h1>Page Title</h1>
+                <h1>NIKE Sneakers</h1>
             </section>
 
             <section>
                 <div className="innerWrap">
-                    <h2>page 1</h2>
-                    <p>Sketch</p>
+                    <h2>Nike Blazer Mid '77 Vintage</h2>
+                    <p>In the '70s, Nike was the new shoe on the block. So new in fact, we were still breaking into the basketball scene and testing prototypes on the feet of our local team. Of course, the design improved over the years, but the name stuck. The Nike Blazer Mid '77 Vintage—classic since the beginning.</p>
                 </div>
-                <img src="./images/pic_1.jpg" className="image" alt="Nike sketch" />
+                <div className="imageWrap">
+                    <img src="./images/nike_1_1.JPG" alt="Blazer Mid" />
+                    <img src="./images/nike_1_2.JPG" alt="Blazer Mid" />
+                </div>
             </section>
 
             <section>
                 <div className="innerWrap">
-                    <h2>page 2</h2>
-                    <p>Use lines</p>
+                    <h2>Nike Air Max 95</h2>
+                    <p>Taking inspiration from the human body and '90s athletics aesthetics, the Nike Air Max 95 mixes unbelievable comfort with fast-paced style. Wavy side panels add natural flow to any outfit while visible Nike Air cushioning in the heel and forefoot delivers comfort you have to feel to believe. Plus, reflective design details decorated with movement-inspired tonal Swoosh logos add a touch of fresh energy.</p>
                 </div>
-                <img src="./images/pic_2.jpg" className="image" alt="" />
+                <div className="imageWrap">
+                    <img src="./images/nike_2_1.JPG" alt="Air Max 95" />
+                    <img src="./images/nike_2_2.JPG" alt="Air Max 95" />
+                </div>
             </section>
 
             <section>
                 <div className="innerWrap">
-                    <h2>page 3</h2>
-                    <p>Add colors</p>
+                    <h2>Nike React Vision</h2>
+                    <p>From the D/MS/X collection comes a story of surreal comfort. Layered textures, intricate lines and vivid colours combine in a design influenced by the exaggerated world of our dreams. React foam and an ultra-plush tongue provide dreamlike comfort. Step into your dream with the Nike React Vision.</p>
                 </div>
-                <img src="./images/pic_3.jpg" className="image" alt="" />
-            </section>
-
-            <section>
-                <div className="innerWrap">
-                    <h2>page 4</h2>
-                    <p>Add black color</p>
+                <div className="imageWrap">
+                    <img src="./images/nike_3_1.JPG" alt="React Vision" />
+                    <img src="./images/nike_3_2.JPG" alt="React Vision" />
                 </div>
-                <img src="./images/pic_4.jpg" className="image" alt="" />
-            </section>
-
-            <section>
-                <div className="innerWrap">
-                    <h2>page 4</h2>
-                    <p>Add point colors</p>
-                </div>
-                <img src="./images/pic_5.jpg" className="image" alt="" />
-            </section>
-
-            <section>
-                <div className="innerWrap">
-                    <h2>page 4</h2>
-                    <p>Finalize</p>
-                </div>
-                <img src="./images/pic_6.jpg" className="image" alt="" />
-            </section>
-
-            <section>
-                <div className="innerWrap">
-                    <h2>page 4</h2>
-                    <p>Add stitch</p>
-                </div>
-                <img src="./images/pic_7.jpg" className="image" alt="" />
             </section>
         </div>
     )
