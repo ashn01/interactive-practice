@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Practice1 from './components/practice1';
 import Practice2 from './components/practice2';
+import Practice3 from './components/practice3';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
         path: "practice2",
         element: <Practice2/>
+    },
+    {
+        path: "practice3",
+        element: <Practice3/>
     }
 ])
 
