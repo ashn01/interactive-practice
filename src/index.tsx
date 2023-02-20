@@ -13,6 +13,7 @@ import Practice1 from './components/practice1';
 import Practice2 from './components/practice2';
 import Practice3 from './components/practice3';
 import Practice4 from './components/practice4';
+import Practice5 from './components/practice5';
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     {
         path: "practice4",
         element: <Practice4/>
+    },
+    {
+        path: "practice5",
+        element: <Practice5/>
     }
 ])
 
