@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './scss/general.scss';
 
 function App() {
-    const [practices, setPractices] = useState<number>(5);
+    const [practices, setPractices] = useState<number>(7);
 
     return (
         <div className="App">
