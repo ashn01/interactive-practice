@@ -14,7 +14,6 @@ export default function Practice6() {
         // var starBg = document.querySelector(".star-background");
         // var title = document.querySelector(".title");
 
-    //스크롤 이벤트
         window.addEventListener("scroll", function(event){
             var scroll = this.scrollY;
             // moving the background faster than the title

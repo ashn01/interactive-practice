@@ -5,7 +5,6 @@ import { ScrollToPlugin } from "gsap/all";
 
 import '../scss/practice7.scss'
 import '../scss/reset.scss'
-import { text } from "express";
 
 export default function Practice7() {
 
@@ -87,7 +86,7 @@ export default function Practice7() {
     }
 
     return (
-        <div className="practice6">
+        <div className="practice7">
             <div className="star-background" ref={background}></div>
             <section className="top">
                 <h1 className="title" ref={title}>
