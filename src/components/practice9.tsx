@@ -2,6 +2,7 @@ import { gsap, Power3, Power4 } from 'gsap';
 import react, { useEffect, useRef, useState } from 'react'
 import {CSSPlugin} from 'gsap/all'
 
+import '../scss/reset.scss'
 import '../scss/practice9.scss';
 
 export default function Practice9() {
@@ -31,13 +32,23 @@ export default function Practice9() {
     }, [])
 
     useEffect(() => {
-
+        buttonEvent(button);
     }, [width, height])
 
     useEffect(() => {
         console.log(button)
         buttonEvent(button);
     }, [button])
+
+    const gsapRandom = (item:ChildNode) => gsap.to(item, 1, {
+        top: Math.random() * (height - 300) + 100,
+        left: Math.random() * (width - 300) + 100,
+        rotationX: "random(-60, 60)",
+        rotationY: "random(-60, 60)",
+        rotationZ: "random(-90, 90)",
+        ease: Power4.easeInOut,
+        delay: "random(0,.5)"
+    })
 
 
     const initEvent = () => {
@@ -51,6 +62,7 @@ export default function Practice9() {
             buttonsRef.current.childNodes.forEach((button, i) => {
                 gsap.from(button, .4, {
                     top: 100,
+                    overflowY: "hidden",
                     ease: Power3.easeInOut,
                     delay: i * .1 + 1
                 })
@@ -82,15 +94,7 @@ export default function Practice9() {
                     break;
                 case 1:
                     sectionRef.current.childNodes.forEach((item, i) => {
-                        gsap.to(item, 1, {
-                            top: Math.random() * (height - 300) + 100,
-                            left: Math.random() * (width - 300) + 100,
-                            rotationX: "random(-60, 60)",
-                            rotationY: "random(-60, 60)",
-                            rotationZ: "random(-90, 90)",
-                            ease: Power4.easeInOut,
-                            delay: "random(0,.5)"
-                        })
+                        gsapRandom(item)
                     })
                     break;
                 case 2:
